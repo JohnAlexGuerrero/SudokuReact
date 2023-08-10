@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TableGame from "./components/TableGame";
+import Numbers from "./components/Numbers";
 
 function App() {
   const [game, setGame] = useState([])
@@ -16,6 +17,8 @@ function App() {
     <div>
       <h1>Sudoku App</h1>
       <TableGame game={game} />
+      <hr/>
+      <Numbers numbers={[1,2,3,4,5]} />
     </div>
   );
 }
