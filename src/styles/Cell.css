@@ -1,0 +1,38 @@
+.main-grid-cell {
+    height: var(--sudoku-cell-size);
+    width: var(--sudoku-cell-size);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-main);
+    color: var(--blue);
+    display: grid;
+    place-items: center;
+    font-size: var(--font-size);
+    cursor: pointer;
+}
+
+.main-grid-cell .filled {
+    background-color: var(--filled-bg);
+    color: var(--filled-color);
+}
+
+.main-grid-cell .selected {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.main-grid-cell:hover {
+    border: 2px solid var(--blue);
+}
+
+.main-grid-cell .hover {
+    border: 3px solid var(--blue);
+}
+
+.dark .main-grid-cell .hover {
+    border: 3px solid var(--blue);
+}
+
+.main-grid-cell .hover {
+    background-color: var(--red);
+    color: var(--white);
+}

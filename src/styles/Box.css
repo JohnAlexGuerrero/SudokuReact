@@ -1,0 +1,7 @@
+.main-box {
+    border: 2px solid var(--red);
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3,auto);
+}

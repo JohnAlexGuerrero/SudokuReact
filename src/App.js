@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import TableGame from "./components/TableGame";
 
 function App() {
+  const [game, setGame] = useState([])
+
+  useEffect(()=>{
+    setGame([[1,2,0,0,5,3,9,8,7],[0,0,3,2,4,5,6,1,0],[3,0,0,5,4,0,2,6,0],
+      [1,2,0,0,5,3,9,8,7],[0,0,3,2,4,5,6,1,0],[3,0,0,5,4,0,2,6,0],
+      [1,2,0,0,5,3,9,8,7],[0,0,3,2,4,5,6,1,0],[3,0,0,5,4,0,2,6,0]
+    ])
+    // console.log(game)
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Sudoku App</h1>
+      <TableGame game={game} />
     </div>
   );
 }
