@@ -1,22 +1,29 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Cell from './Cell'
 import '../styles/Box.css'
 
 const Box = (props) => {
-  const arrNumbers = props.arrNumbers
+  var arrNumbers = props.arrNumbers
+  const refBox = useRef(props.id)
 
-  const handleSelected = ()=>{
-    console.log('onclick ')
+  const handleSelected = (evt)=>{
+    let cell = evt.target
+    cell.classList.add('selected')
+
+    let childrenBox = refBox.current.children
+    for (const child of childrenBox) {
+      child.classList.add('hover')
+    }
   }
 
   return (
-    <div className='main-box'>
+    <div className='main-box' ref={refBox} id={props.id}>
       {
         arrNumbers.map(element => (
           <Cell 
-            key={`cell_${element}`}
+            key={`cell-${element}`}
             number={element}
-            onClick={handleSelected} 
+            onClick={evt => handleSelected(evt)} 
           />
         ))
       }

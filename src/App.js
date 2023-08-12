@@ -8,15 +8,19 @@ function App() {
   const [game, setGame] = useState([])
 
   useEffect(()=>{
-    let sudoku = []
+    let idx = 0
+    let sudokuPuzzle = []
 
     for (const numbersBox of sudokuQuizzes.split(',')) {
-      let arr = Array.from(numbersBox)
-      sudoku.push(arr)     
+      let sudokuBox = {
+        id: idx,
+        numbers: Array.from(numbersBox)
+      }      
+      sudokuPuzzle.push(sudokuBox)
+      idx += 1
     }
 
-    setGame(sudoku)
-    // console.log(game)
+    setGame(sudokuPuzzle)
   },[])
 
   return (

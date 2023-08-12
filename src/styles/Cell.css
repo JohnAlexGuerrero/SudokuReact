@@ -14,10 +14,11 @@
     background-color: var(--filled-bg);
     color: var(--filled-color);
     font-weight: 700;
+    cursor: auto;
 }
 
 .main-grid-cell.selected {
-    background-color: var(--blue);
+    background-color: var(--selected-bg);
     color: var(--white);
 }
 
@@ -26,14 +27,14 @@
 }
 
 .main-grid-cell.hover {
-    border: 3px solid var(--blue);
+    border: 2px solid var(--blue);
 }
 
-.dark .main-grid-cell.hover {
+/* .main-grid-cell.hover-error {
     border: 3px solid var(--blue);
-}
+} */
 
-.main-grid-cell.hover {
+.main-grid-cell.hover-error {
     background-color: var(--red);
     color: var(--white);
 }

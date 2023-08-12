@@ -7,7 +7,7 @@ const Cell = ({number, onClick}) => {
   return (
     <div 
       className={`main-grid-cell ${isZero ? '': 'filled'}`}
-      onClick={onClick}
+      onClick={isZero ? onClick : null}
     >
       {isZero ? '': number}
     </div>

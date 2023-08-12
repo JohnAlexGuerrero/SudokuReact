@@ -7,7 +7,11 @@ const TableGame = ({game}) => {
   return (
     <div className='main-game'>
       {game.map(element =>(
-        <Box key={element + 45} arrNumbers={element} />
+        <Box 
+          key={`box-${element.id}`}
+          id={`box-${element.id}`}
+          arrNumbers={element.numbers}
+        />
       ))}
     </div>
   )
