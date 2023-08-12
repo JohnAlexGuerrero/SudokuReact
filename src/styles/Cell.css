@@ -10,12 +10,13 @@
     cursor: pointer;
 }
 
-.main-grid-cell .filled {
+.main-grid-cell.filled {
     background-color: var(--filled-bg);
     color: var(--filled-color);
+    font-weight: 700;
 }
 
-.main-grid-cell .selected {
+.main-grid-cell.selected {
     background-color: var(--blue);
     color: var(--white);
 }
@@ -24,15 +25,15 @@
     border: 2px solid var(--blue);
 }
 
-.main-grid-cell .hover {
+.main-grid-cell.hover {
     border: 3px solid var(--blue);
 }
 
-.dark .main-grid-cell .hover {
+.dark .main-grid-cell.hover {
     border: 3px solid var(--blue);
 }
 
-.main-grid-cell .hover {
+.main-grid-cell.hover {
     background-color: var(--red);
     color: var(--white);
 }

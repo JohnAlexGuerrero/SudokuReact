@@ -3,11 +3,23 @@ import Cell from './Cell'
 import '../styles/Box.css'
 
 const Box = (props) => {
+  const arrNumbers = props.arrNumbers
+
+  const handleSelected = ()=>{
+    console.log('onclick ')
+  }
+
   return (
     <div className='main-box'>
-      {props.arrNumbers.map(element => (
-        <Cell key={element} number={element} />
-      ))}
+      {
+        arrNumbers.map(element => (
+          <Cell 
+            key={`cell_${element}`}
+            number={element}
+            onClick={handleSelected} 
+          />
+        ))
+      }
     </div>
   )
 }
